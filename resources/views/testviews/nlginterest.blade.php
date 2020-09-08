@@ -1,0 +1,44 @@
+<table>
+    @foreach($details as $detail)
+        <tr>
+            <td>
+                {{$detail['id']}}
+            </td>
+            <td>
+                {{$detail['bank_name']}}
+            </td>
+            <td>
+                {{$detail['transaction_date']}}
+            </td>
+            <td>
+                {{$detail['mature_date']}}
+            </td>
+            <td>
+                {{$detail['fd_number']}}
+            </td>
+            <td>
+                {{$detail['amount']}}
+            </td>
+            <td>
+                {{$detail['excel_interest_rate']}}
+            </td>
+            <td>
+                {{$detail['system_interest_rate']}}
+            </td>
+            <td>
+                {{$detail['status']}}
+            </td>
+            <td>
+                {{$detail['transaction_date_system']}}
+            </td>
+            <td>
+                {{$detail['mature_date_system']}}
+            </td>
+            <td>
+                {{$detail['bank_system']}}
+            </td>
+
+        </tr>
+    @endforeach
+
+</table>

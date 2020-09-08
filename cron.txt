@@ -1,0 +1,23 @@
+
+   BadMethodCallException  : Method Illuminate\Database\Query\Builder::all does not exist.
+
+  at C:\MAMP\htdocs\investment-management-2\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2816
+    2812|         if (Str::startsWith($method, 'where')) {
+    2813|             return $this->dynamicWhere($method, $parameters);
+    2814|         }
+    2815| 
+  > 2816|         throw new BadMethodCallException(sprintf(
+    2817|             'Method %s::%s does not exist.', static::class, $method
+    2818|         ));
+    2819|     }
+    2820| }
+
+  Exception trace:
+
+  1   Illuminate\Database\Query\Builder::__call("all", [])
+      C:\MAMP\htdocs\investment-management-2\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:1286
+
+  2   Illuminate\Database\Eloquent\Builder::__call("all", [])
+      C:\MAMP\htdocs\investment-management-2\app\Console\Commands\UpdateShareTable.php:43
+
+  Please use the argument -v to see more details.
